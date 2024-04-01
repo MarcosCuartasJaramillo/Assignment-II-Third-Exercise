@@ -1,0 +1,16 @@
+def getParkingHours():
+  hours=int(input('Enter parking hours: '))
+  return hours
+
+def calcParkingFee(x):
+  fee = 2.5 * x
+  if fee <= 6:
+    return 6
+  elif fee >= 20:
+    return 20
+  else:
+    return fee
+
+hours = getParkingHours()
+fee = calcParkingFee(hours)
+print(f'Total fee:{fee}')
